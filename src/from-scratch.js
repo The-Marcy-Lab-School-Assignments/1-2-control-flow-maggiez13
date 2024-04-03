@@ -42,16 +42,16 @@ const happyBirthdayPet = (breed, age) => {
   }
 };
 
-// console.log(happyBirthdayPet("snake", 5));
-// console.log(happyBirthdayPet("cat", 3));
-// console.log(happyBirthdayPet("cat", 5));
-// console.log(happyBirthdayPet("cat", 7));
-// console.log(happyBirthdayPet("dog", 3));
-// console.log(happyBirthdayPet("dog", 5));
-// console.log(happyBirthdayPet("dog", 9));
-// console.log(happyBirthdayPet("dog", 10));
-// console.log(happyBirthdayPet("dog", 12));
-// console.log(happyBirthdayPet("horse", 13));
+// happyBirthdayPet("snake", 5);
+// happyBirthdayPet("cat", 3);
+// happyBirthdayPet("cat", 5);
+// happyBirthdayPet("cat", 7);
+// happyBirthdayPet("dog", 3);
+// happyBirthdayPet("dog", 5);
+// happyBirthdayPet("dog", 9);
+// happyBirthdayPet("dog", 10);
+// happyBirthdayPet("dog", 12);
+// happyBirthdayPet("horse", 13);
 
 const funTypes = (jsType) => {
 
@@ -60,8 +60,29 @@ const funTypes = (jsType) => {
 const rounder = () => {
 };
 
-const fizzBuzzish = () => {
+const fizzBuzzish = (num) => {
+  if (num % 3 === 0 && num % 5 === 0) {
+    console.log("fizzBuzz!")
+  } else if (num % 3 === 0) {
+    console.log("fizz");
+  } else if (num % 5 === 0) {
+    console.log("buzz");
+  } else {
+    console.log(num);
+  }
 };
+
+// fizzBuzzish(1);
+// fizzBuzzish(2);
+// fizzBuzzish(3);
+// fizzBuzzish(4);
+// fizzBuzzish(5);
+// fizzBuzzish(10);
+// fizzBuzzish(12);
+// fizzBuzzish(15);
+// fizzBuzzish(30);
+// fizzBuzzish(31);
+
 
 module.exports = {
   measureRain,
