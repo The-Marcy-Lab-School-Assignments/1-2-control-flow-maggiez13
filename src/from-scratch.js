@@ -24,6 +24,7 @@ const measureRain = (inches) => {
 // (measureRain(10));
 
 
+
 const happyBirthdayPet = (breed, age) => {
   if (breed === "snake") {
     console.log("Hiss hiss!");
@@ -53,12 +54,70 @@ const happyBirthdayPet = (breed, age) => {
 // happyBirthdayPet("dog", 12);
 // happyBirthdayPet("horse", 13);
 
+
+
 const funTypes = (jsType) => {
-
+  if (typeof jsType === "string") {
+    console.log("That's just some text.");
+  } else if (typeof jsType === "undefined") {
+    console.log("Nothing, but I didn't set that.")
+  } else if (Number.isNaN(jsType)) {
+    console.log("Well, now you're just showing off.")
+  } else if (typeof jsType === "number") {
+    console.log("That's a good number.");
+  } else if (typeof jsType === "boolean") {
+    console.log("To bool, or not to bool?");
+  }  else if (jsType === null) {
+    console.log("Nothing, and I did set that.");
+  } else if (Array.isArray(jsType)) {
+    // jsType instanceof Array
+    console.log("I order you to be indexed.")
+  } else if (typeof jsType === "object") {
+    console.log("Anybody got the key?");
+  } 
 };
 
-const rounder = () => {
+funTypes("string");
+funTypes('');
+funTypes(1);
+funTypes(0);
+funTypes(true);
+funTypes(false);
+funTypes(undefined); 
+funTypes(null); //
+funTypes({}); 
+funTypes([]);
+funTypes(NaN);
+
+
+
+const rounder = (float, roundingSetting) => {
+  if (roundingSetting === "up") {
+    return Math.ceil(float);
+  } else if (roundingSetting === "down") {
+    return Math.floor(float);
+  } else if (roundingSetting === "honest") {
+    const decimal = float - Math.floor(float);
+    if (decimal < 0.5) {
+      return Math.floor(float);
+    } else {
+      return Math.ceil(float);
+    }
+  }
 };
+
+// console.log((rounder(1.0, 'up')));
+// console.log((rounder(1.1, 'up')));
+// console.log((rounder(3.9, 'up')));
+// console.log((rounder(1.9, 'down')));
+// console.log((rounder(5.0, 'down')));
+// console.log((rounder(5.1, 'down')));
+// console.log((rounder(1.9, 'honest')));
+// console.log((rounder(1.5, 'honest')));
+// console.log((rounder(1.4, 'honest')));
+// console.log((rounder(1.0, 'honest')));
+
+
 
 const fizzBuzzish = (num) => {
   if (num % 3 === 0 && num % 5 === 0) {
