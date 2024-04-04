@@ -84,7 +84,7 @@ funTypes(0);
 funTypes(true);
 funTypes(false);
 funTypes(undefined); 
-funTypes(null); //
+funTypes(null); 
 funTypes({}); 
 funTypes([]);
 funTypes(NaN);

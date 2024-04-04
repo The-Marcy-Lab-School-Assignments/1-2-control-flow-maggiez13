@@ -1,10 +1,10 @@
 const getRandomIntInRange = (min, max) => {
   if (min > max) throw new Error('min must be less than max');
-  return Math.floor(Math.random() * (max-min + 1) + min);
+  return Math.floor(Math.random() * (max - min) + min);
   // return Math.floor(Math.random() * max);
 };
 
-console.log(getRandomIntInRange(5, 10));
+// console.log(getRandomIntInRange(5, 10));
 
 
 
@@ -43,6 +43,7 @@ const funkoPopAddictionLevel = (numOfFunkoPops) => {
 // funkoPopAddictionLevel(100);
 
 
+
 const getWeatherReport = (temperature) => {
   const report = "And that's your report!"
   if (temperature > 90) {
@@ -68,19 +69,45 @@ const getWeatherReport = (temperature) => {
   }
 };
 
+
 getWeatherReport(100);
 getWeatherReport(31);
 getWeatherReport(71);
 getWeatherReport(32);
 
 
+
+// if num < 0, return positive -> need to change to > 
+// else if num === 0, return zero
+// else negative
+
+  // if (num === 0) return "Zero";
+  //   // if num = 0 return "Zero"
+  // return (num < 1) ? "Negative" : "Positive";
+  //   // else if num < 1 return "Negative"
+  //   // else return "Positive"
+
+  // 2 ternarys
+  // return num > 0 ? "Positive" 
+  //   : num === 0 ? "Zero"
+  //   : "Negative"
+
 const returnPositiveNegativeZero = (num) => {
-  return num < 0
-    ? "Positive"
-    : num === 0
-      ? "Zero"
-      : "Negative";
+  if (num === 0) {
+    return "Zero";
+  } else if (num > 0) {
+    return "Positive";
+  } else return "Negative";
 };
+
+
+
+// console.log(returnPositiveNegativeZero(0));
+// console.log(returnPositiveNegativeZero(1));
+// console.log(returnPositiveNegativeZero(2));
+// console.log(returnPositiveNegativeZero(-1));
+// console.log(returnPositiveNegativeZero(-2));
+
 
 module.exports = {
   getRandomIntInRange,
