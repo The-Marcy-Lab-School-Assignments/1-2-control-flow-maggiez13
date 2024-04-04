@@ -4,9 +4,12 @@ const wildlyBiasedReview = (location) => {
     console.log('THE CITY THAT NEVER SLEEPS');
     console.log('WOW WHAT A CITY');
   } else {
-    console.log('Yea that place is cool I guess');
+    return console.log('Yea that place is cool I guess');
   }
 };
+
+console.log(wildlyBiasedReview("NYC"));
+console.log(wildlyBiasedReview("LA"));
 
 module.exports = {
   wildlyBiasedReview,
