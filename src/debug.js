@@ -1,25 +1,47 @@
 const getRandomIntInRange = (min, max) => {
   if (min > max) throw new Error('min must be less than max');
-  return Math.floor(Math.random() * max);
+  return Math.floor(Math.random() * (max-min + 1) + min);
+  // return Math.floor(Math.random() * max);
 };
 
+console.log(getRandomIntInRange(5, 10));
+
+
+
 const coolnessGauge = (numOfFridges) => {
-  return numOfFridges > 5 ? 'You need more fridges.' : 'You are downright chilly!';
+  return numOfFridges > 3 ? 'You are downright chilly!' : 'You need more fridges.';
 };
+
+// console.log(coolnessGauge(0));
+// console.log(coolnessGauge(3));
+// console.log(coolnessGauge(4));
+
+
 
 const funkoPopAddictionLevel = (numOfFunkoPops) => {
   if (numOfFunkoPops === 0) {
     console.log('No pops? Maybe try one.');
-  } else if (numOfFunkoPops >= 1) {
+  } else if (numOfFunkoPops >= 1 && numOfFunkoPops <= 10) {
     console.log('Only a few? Keep having fun!');
-  } else if (numOfFunkoPops > 10) {
+  } else if (numOfFunkoPops > 10 && numOfFunkoPops <= 20) {
     console.log('You have a problem.');
-  } else if (numOfFunkoPops > 20) {
+  } else if (numOfFunkoPops > 20 && numOfFunkoPops <= 30) {
     console.log('You need help!');
   } else {
     console.log('You need an intervention!!!');
   }
 };
+
+// funkoPopAddictionLevel(0);
+// funkoPopAddictionLevel(1);
+// funkoPopAddictionLevel(10);
+// funkoPopAddictionLevel(11);
+// funkoPopAddictionLevel(20);
+// funkoPopAddictionLevel(21);
+// funkoPopAddictionLevel(30);
+// funkoPopAddictionLevel(31);
+// funkoPopAddictionLevel(100);
+
 
 const getWeatherReport = (temperature) => {
   if (temperature > 90) {
