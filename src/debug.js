@@ -44,31 +44,49 @@ const funkoPopAddictionLevel = (numOfFunkoPops) => {
 
 
 
-const getWeatherReport = (temperature) => {
-  const report = "And that's your report!"
-  if (temperature > 90) {
-    let weatherReport = "It's hot and gross out.";
-    console.log(weatherReport);
-    console.log(report);
-    return weatherReport;
-  } else if (temperature > 70) {
-    let weatherReport = "At least it's a dry heat.";
-    console.log(weatherReport);
-    console.log(report);
-    return weatherReport;
-  } else if (temperature < 32) {
-    let weatherReport = "Wow, it's cold out.";
-    console.log(weatherReport);
-    console.log(report);
-    return weatherReport;
-  } else if (temperature === 32) {
-    let weatherReport = "It's not too bad!";
-    console.log(weatherReport);
-    console.log(report);
-    return weatherReport;
-  }
-};
+// const getWeatherReport = (temperature) => {
+//   const report = "And that's your report!"
+//   if (temperature > 90) {
+//     let weatherReport = "It's hot and gross out.";
+//     console.log(weatherReport);
+//     console.log(report);
+//     return weatherReport;
+//   } else if (temperature > 70) {
+//     let weatherReport = "At least it's a dry heat.";
+//     console.log(weatherReport);
+//     console.log(report);
+//     return weatherReport;
+//   } else if (temperature < 32) {
+//     let weatherReport = "Wow, it's cold out.";
+//     console.log(weatherReport);
+//     console.log(report);
+//     return weatherReport;
+//   } else if (temperature === 32) {
+//     let weatherReport = "It's not too bad!";
+//     console.log(weatherReport);
+//     console.log(report);
+//     return weatherReport;
+//   }
+// };
 
+const getWeatherReport = (temperature) => {
+  let weatherReport = "";
+  if (temperature > 90) {
+    weatherReport = "It's hot and gross out.";
+    console.log(weatherReport);
+  } else if (temperature > 70) {
+    weatherReport = "At least it's a dry heat.";
+    console.log(weatherReport);
+  } else if (temperature < 32) {
+    weatherReport = "Wow, it's cold out.";
+    console.log(weatherReport);
+  } else if (temperature === 32) {
+    weatherReport = "It's not too bad!";
+    console.log(weatherReport);
+  }
+  console.log("And that's your report!");
+  return weatherReport;
+};
 
 getWeatherReport(100);
 getWeatherReport(31);

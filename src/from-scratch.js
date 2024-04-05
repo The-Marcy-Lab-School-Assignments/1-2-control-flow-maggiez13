@@ -1,4 +1,3 @@
-// need to fix
 const measureRain = (inches) => {
   if (inches === 0) {
     console.log("drought");
@@ -94,10 +93,13 @@ funTypes(NaN);
 const rounder = (float, roundingSetting) => {
   if (roundingSetting === "up") {
     return Math.ceil(float);
+      // round float up to nearest integer
   } else if (roundingSetting === "down") {
     return Math.floor(float);
+      // round float down to nearest integer 
   } else if (roundingSetting === "honest") {
     const decimal = float - Math.floor(float);
+      // subtacts integer from float to get decimal
     if (decimal < 0.5) {
       return Math.floor(float);
     } else {
