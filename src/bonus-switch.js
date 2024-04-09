@@ -1,3 +1,4 @@
+/** FEEDBACK: AMAZING! GREAT JOB! */
 const measureRainSwitch = (inches) => {
   switch (true) {
     case inches === 0:

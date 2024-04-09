@@ -54,7 +54,7 @@ const happyBirthdayPet = (breed, age) => {
 // happyBirthdayPet("horse", 13);
 
 
-
+/** FEEDBACK: This one was tough but you got it! Great job! */
 const funTypes = (jsType) => {
   if (typeof jsType === "string") {
     console.log("That's just some text.");

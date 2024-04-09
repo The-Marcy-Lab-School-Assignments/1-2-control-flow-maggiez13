@@ -1,3 +1,4 @@
+/** FEEDBACK: Great job getting all test cases to pass however make sure that before you submit you clean up your code by removing any commented out code and empty spaces. */
 const getRandomIntInRange = (min, max) => {
   if (min > max) throw new Error('min must be less than max');
   return Math.floor(Math.random() * (max - min) + min);
@@ -109,7 +110,13 @@ getWeatherReport(32);
   // return num > 0 ? "Positive" 
   //   : num === 0 ? "Zero"
   //   : "Negative"
-
+  
+/** FEEDBACK: Great use of conditionals here, you could've also used a ternary here. Your code would then look like this: 
+const returnPositiveNegativeZero = (num) => {
+  if (num === 0) return 'Zero';
+  return (num < 1) ? 'Negative' : 'Positive';
+};
+ */
 const returnPositiveNegativeZero = (num) => {
   if (num === 0) {
     return "Zero";
